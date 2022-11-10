@@ -1,0 +1,48 @@
+local opts = { noremap = true, silent = true }
+
+local term_opts = { silent = true }
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+keymap("", "d", "g", opts)
+keymap("", "e", "k", opts)
+keymap("", "f", "e", opts)
+keymap("", "g", "t", opts)
+keymap("", "i", "l", opts)
+keymap("", "j", "y", opts)
+keymap("", "k", "n", opts)
+keymap("", "l", "u", opts)
+keymap("", "n", "j", opts)
+keymap("", "o", "p", opts)
+keymap("", "p", "r", opts)
+keymap("", "r", "s", opts)
+keymap("", "s", "d", opts)
+keymap("", "t", "f", opts)
+keymap("", "u", "i", opts)
+keymap("", "y", "o", opts)
+keymap("", "D", "G", opts)
+keymap("", "E", "K", opts)
+keymap("", "F", "E", opts)
+keymap("", "G", "T", opts)
+keymap("", "I", "L", opts)
+keymap("", "J", "Y", opts)
+keymap("", "K", "N", opts)
+keymap("", "L", "U", opts)
+keymap("", "N", "J", opts)
+keymap("", "O", "P", opts)
+keymap("", "P", "R", opts)
+keymap("", "R", "S", opts)
+keymap("", "S", "D", opts)
+keymap("", "T", "F", opts)
+keymap("", "U", "I", opts)
+keymap("", "Y", "O", opts)
+
+vim.keymap.set("n","<leader>r",":!<c-r>=getline('.')<cr><cr>")
+
+keymap("n", "dn", "gj", opts)
+keymap("n", "de", "gk", opts)
